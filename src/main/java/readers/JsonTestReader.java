@@ -14,7 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonTestReader {
-    public static void main(String[] args) {
+
+    public List<Employee> JsonTestReader() {
         JSONParser jsonParser = new JSONParser();
         ClassLoader classLoader = JsonTestReader.class.getClassLoader();
         File f = new File(classLoader.getResource("employees(2).json").getFile());
@@ -25,19 +26,19 @@ public class JsonTestReader {
 
             //Read JSON file
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
-            JSONArray employees = (JSONArray)obj.get("employees");
+            JSONArray employees = (JSONArray) obj.get("employees");
             System.out.println(employees);
 
             //Iterate over employee array
-            employees.forEach( emp -> parseEmployeeObject( (JSONObject) emp, emplist ) );
+            employees.forEach(emp -> parseEmployeeObject((JSONObject) emp, emplist));
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
 
         emplist.forEach(emp -> System.out.println(emp.getName()));
+        return emplist;
     }
-
-    private static void parseEmployeeObject(JSONObject employee, List emplist)
+    private void parseEmployeeObject(JSONObject employee, List emplist)
     {
         //Get employee object within list
         Long id = (Long) employee.get("id");
