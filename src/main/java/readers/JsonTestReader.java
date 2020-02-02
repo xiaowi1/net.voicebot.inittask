@@ -38,24 +38,8 @@ public class JsonTestReader {
 
         return emplist;
     }
-    private void parseEmployeeObject(JSONObject employee, List emplist)
-    {
-        //Get employee object within list
-//        Long id = (Long) employee.get("id");
-//        System.out.println(id);
-//
-//        String name = (String) employee.get("name");
-//        System.out.println(name);
-//
-//        String surname = (String) employee.get("surname");
-//        System.out.println(surname);
-//
-//        String job = (String) employee.get("job");
-//        System.out.println(job);
-//
-//        String salary = (String) employee.get("salary");
-//        System.out.println(salary);
 
+    private void parseEmployeeObject(JSONObject employee, List emplist) {
         Employee emp = new Employee(
                 (Long) employee.get("id"),
                 (String) employee.get("name"),
