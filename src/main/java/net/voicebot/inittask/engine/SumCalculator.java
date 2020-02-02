@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class SumCalculator {
 
-    public static Map<String, BigDecimal> calculate(List<Employee> employees) {
+    public  Map<String, BigDecimal> calculate(List<Employee> employees) {
         //creating empty map
         Map<String, BigDecimal> workingmap = new HashMap<>();
 

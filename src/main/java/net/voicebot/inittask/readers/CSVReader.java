@@ -10,7 +10,7 @@ import java.util.List;
 
 import static net.voicebot.inittask.common.ProjectConstants.SEMICOLON;
 
-public class ExcelReader implements Reader{
+public class CSVReader implements Reader{
 
     @Override
     public List<Employee> read(String pathToFile) {
