@@ -11,16 +11,17 @@ import java.util.List;
 import static common.ProjectConstants.PATH_TO_CSV;
 import static common.ProjectConstants.SEMICOLON;
 
-public class ExcelReader {
+public class ExcelReader implements Reader{
 
-    public List<Employee> excelTestReader() {
+    @Override
+    public List<Employee> read(String pathToFile) {
         BufferedReader br = null;
         String line = "";
 
         List<Employee> employeeList2 = new ArrayList<>();
         try {
 
-            br = new BufferedReader(new FileReader(PATH_TO_CSV));
+            br = new BufferedReader(new FileReader(pathToFile));
             while ((line = br.readLine()) != null) {
 
                 String[] emp = line.split(SEMICOLON);

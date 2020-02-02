@@ -12,12 +12,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonTestReader {
+public class JsonTestReader implements Reader{
 
-    public List<Employee> jsonTestReader() {
+    @Override
+    public List<Employee> read(String pathToFile){
         JSONParser jsonParser = new JSONParser();
         ClassLoader classLoader = JsonTestReader.class.getClassLoader();
-        File f = new File(classLoader.getResource("employees(2).json").getFile());
+        File f = new File(classLoader.getResource(pathToFile).getFile());
 
         List<Employee> emplist = new ArrayList<>();
 

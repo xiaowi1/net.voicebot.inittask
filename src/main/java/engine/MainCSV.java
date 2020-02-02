@@ -1,18 +1,15 @@
 package engine;
 
-import employee.Employee;
 import readers.ExcelReader;
+import readers.Reader;
 
-import java.util.List;
-
-import static engine.SumPrinter.print;
+import static common.ProjectConstants.PATH_TO_CSV;
+import static common.ProjectConstants.PATH_TO_JSON;
 
 public class MainCSV extends SumCalculator {
     public static void main(String[] args) {
-
-        ExcelReader excelReader = new ExcelReader();
-        List<Employee> employees = excelReader.excelTestReader();
-        print(calculate(employees));
-
+        Reader excelReader = new ExcelReader();
+        Engine engine = new Engine();
+        engine.runCalculations(excelReader, PATH_TO_CSV);
     }
 }
