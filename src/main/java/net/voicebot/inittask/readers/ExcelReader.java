@@ -29,11 +29,11 @@ public class ExcelReader implements Reader{
                     continue;
                 }
                 //creating employees and adding them to the list
-                employeeList2.add(new Employee(Long.valueOf(emp[0].strip())
-                        , emp[1].strip().substring(1, emp[1].strip().length() - 1)
-                        , emp[2].strip().substring(1, emp[2].strip().length() - 1)
-                        , emp[3].strip().substring(1, emp[3].strip().length() - 1)
-                        , emp[4].strip().substring(1, emp[4].strip().length() - 1)));
+                employeeList2.add(new Employee(Long.valueOf(emp[0].trim())
+                        , emp[1].trim().substring(1, emp[1].trim().length() - 1)
+                        , emp[2].trim().substring(1, emp[2].trim().length() - 1)
+                        , emp[3].trim().substring(1, emp[3].trim().length() - 1)
+                        , emp[4].trim().substring(1, emp[4].trim().length() - 1)));
             }
 
         } catch (IOException e) {
