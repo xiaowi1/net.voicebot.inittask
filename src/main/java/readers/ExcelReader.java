@@ -1,7 +1,6 @@
 package readers;
 
 import employee.Employee;
-import org.w3c.dom.ls.LSOutput;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,22 +8,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static common.ProjectConstants.PATH_TO_CSV;
+import static common.ProjectConstants.SEMICOLON;
+
 public class ExcelReader {
 
-    public List<Employee> ExcelTestReader() {
-
-        String csvFile = "../net.voicebot.inittask/src/main/resources/employees(2).csv";
+    public List<Employee> excelTestReader() {
         BufferedReader br = null;
         String line = "";
-        String cvsSplitBy = ";";
 
         List<Employee> employeeList2 = new ArrayList<>();
         try {
 
-            br = new BufferedReader(new FileReader(csvFile));
+            br = new BufferedReader(new FileReader(PATH_TO_CSV));
             while ((line = br.readLine()) != null) {
 
-                String[] emp = line.split(cvsSplitBy);
+                String[] emp = line.split(SEMICOLON);
                 //ignoring the first line
                 if (emp[0].equals("id")) {
                     continue;

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class JsonTestReader {
 
-    public List<Employee> JsonTestReader() {
+    public List<Employee> jsonTestReader() {
         JSONParser jsonParser = new JSONParser();
         ClassLoader classLoader = JsonTestReader.class.getClassLoader();
         File f = new File(classLoader.getResource("employees(2).json").getFile());
