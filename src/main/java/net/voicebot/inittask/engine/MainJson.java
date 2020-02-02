@@ -1,9 +1,9 @@
-package engine;
+package net.voicebot.inittask.engine;
 
-import readers.JsonTestReader;
-import readers.Reader;
+import net.voicebot.inittask.readers.JsonTestReader;
+import net.voicebot.inittask.readers.Reader;
 
-import static common.ProjectConstants.PATH_TO_JSON;
+import static net.voicebot.inittask.common.ProjectConstants.PATH_TO_JSON;
 
 
 public class MainJson extends SumCalculator {

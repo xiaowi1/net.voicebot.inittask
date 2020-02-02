@@ -1,15 +1,14 @@
-package engine;
+package net.voicebot.inittask.engine;
 
-import employee.Employee;
-import readers.Reader;
+import net.voicebot.inittask.employee.Employee;
+import net.voicebot.inittask.readers.Reader;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
-import static common.ProjectConstants.PATH_TO_JSON;
-import static engine.SumCalculator.calculate;
-import static engine.SumPrinter.print;
+import static net.voicebot.inittask.engine.SumCalculator.calculate;
+import static net.voicebot.inittask.engine.SumPrinter.print;
 
 public class Engine {
     public void runCalculations(Reader reader, String pathToFile) {

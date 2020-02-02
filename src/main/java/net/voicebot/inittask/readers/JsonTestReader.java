@@ -1,6 +1,6 @@
-package readers;
+package net.voicebot.inittask.readers;
 
-import employee.Employee;
+import net.voicebot.inittask.employee.Employee;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -31,7 +31,7 @@ public class JsonTestReader implements Reader{
             //printing out employees
             //System.out.println(employees);
 
-            //Iterate over employee array
+            //Iterate over net.voicebot.inittask.employee array
             employees.forEach(emp -> parseEmployeeObject((JSONObject) emp, emplist));
         } catch (IOException | ParseException e) {
             e.printStackTrace();

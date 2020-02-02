@@ -1,4 +1,4 @@
-package common;
+package net.voicebot.inittask.common;
 
 public class ProjectConstants {
     public static String PATH_TO_JSON = "employees(2).json";

@@ -1,6 +1,6 @@
-package readers;
+package net.voicebot.inittask.readers;
 
-import employee.Employee;
+import net.voicebot.inittask.employee.Employee;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static common.ProjectConstants.PATH_TO_CSV;
-import static common.ProjectConstants.SEMICOLON;
+import static net.voicebot.inittask.common.ProjectConstants.SEMICOLON;
 
 public class ExcelReader implements Reader{
 

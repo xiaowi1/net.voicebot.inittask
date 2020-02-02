@@ -1,4 +1,4 @@
-package employee;
+package net.voicebot.inittask.employee;
 
 public class Employee {
 

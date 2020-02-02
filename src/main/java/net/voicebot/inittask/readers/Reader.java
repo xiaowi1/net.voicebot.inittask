@@ -1,6 +1,6 @@
-package readers;
+package net.voicebot.inittask.readers;
 
-import employee.Employee;
+import net.voicebot.inittask.employee.Employee;
 
 import java.util.List;
 

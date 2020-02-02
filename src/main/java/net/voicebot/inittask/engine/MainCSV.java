@@ -1,10 +1,9 @@
-package engine;
+package net.voicebot.inittask.engine;
 
-import readers.ExcelReader;
-import readers.Reader;
+import net.voicebot.inittask.readers.ExcelReader;
+import net.voicebot.inittask.readers.Reader;
 
-import static common.ProjectConstants.PATH_TO_CSV;
-import static common.ProjectConstants.PATH_TO_JSON;
+import static net.voicebot.inittask.common.ProjectConstants.PATH_TO_CSV;
 
 public class MainCSV extends SumCalculator {
     public static void main(String[] args) {
