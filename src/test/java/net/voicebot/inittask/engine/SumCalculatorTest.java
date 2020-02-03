@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
